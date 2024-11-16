@@ -1,0 +1,154 @@
+* {
+  font-family: 'Henny Penny', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: rgb(20, 20, 20);
+}
+
+#catQuizBorder {
+  width: 500px;
+  height: 570px;
+  padding: 20px;
+  border: 20px solid transparent; 
+  border-image: url('/images/flowerborder.jpg');
+  border-image-slice: 75;
+  border-image-repeat: stretch;
+  background: #ffe0e5;
+  border-radius: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+@keyframes dance {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(-10deg);
+  }
+  50% {
+    transform: translateY(10px) rotate(5deg);
+  }
+  75% {
+    transform: translateY(-5px) rotate(-2deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+}
+
+.catQuizHeader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  animation: dance 3s ease-in-out;
+}
+
+.catImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 60px;
+}
+
+#catImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin-left: 10px;
+}
+
+@keyframes growShrink {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.startButton {
+  width: 150px;
+  height: 50px;
+  border: none;
+  background-color: rgb(250, 157, 172);
+  font-size: 25px;
+  border-radius: 50px;
+}
+
+.startButton:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 15px rgb(243, 94, 139);
+  animation: growShrink 1s ease-in-out infinite;
+}
+
+/*Question 1 Page*/
+
+.sunArtImage {
+  width: 100px;
+  height: 100px;
+}
+
+.Question1HeaderContainer {
+  display: flex;
+  position: fixed;
+  top: 11%;
+  width: 450px;
+}
+
+.questionSection {
+  display: flex;
+  flex-direction: row;
+  margin-top: 120px;
+}
+
+.questionButton {
+  margin: 10px 5px;
+  width: 220px;
+  height: 125px;
+  background: rgb(250, 157, 172);
+  font-size: 17px;
+}
+
+.questionButton:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 15px rgb(243, 94, 139);
+}
+
+.questionButton:focus{
+  background: rgb(253, 108, 152);
+  animation: growShrink 1s ease-in-out infinite;
+}
+
+.previousButton, .nextButton {
+  width: 150px;
+  height: 50px;
+  border: none;
+  background-color: rgb(250, 157, 172);
+  font-size: 25px;
+  border-radius: 50px;
+  margin-top: 35px;
+  margin-right: 20px;
+}
+
+.previousButton:hover, .nextButton:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 15px rgb(243, 94, 139);
+}
+
+.noUnderline {
+  text-decoration: none;
+}
