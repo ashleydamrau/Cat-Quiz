@@ -128,9 +128,9 @@ body {
 
 /*Question 1 Page*/
 
-.sunArtImage {
-  width: 100px;
-  height: 100px;
+.cat1Image, .cat2Image {
+  width: 160px;
+  height: 140px;
 }
 
 .Question1HeaderContainer {
@@ -138,6 +138,10 @@ body {
   position: fixed;
   top: 11%;
   width: 450px;
+}
+
+.headerQuiz1, .headerQuiz2 {
+  font-size: 30px;
 }
 
 .questionSection {
@@ -184,3 +188,73 @@ body {
 .noUnderline {
   text-decoration: none;
 }
+
+/*QUESTION 3*/
+
+.cat3Image {
+  width: 200px;
+  height: 140px;
+}
+
+.headerQuiz3 {
+  font-size: 30px;
+}
+
+.cat4Image {
+  width: 170px;
+  height: 140px;
+  border-radius: 50%;
+  padding-left: 5px;
+}
+
+.headerQuiz4 {
+  font-size: 30px;
+}
+
+.cat5Image {
+  width: 160px;
+  height: 140px;
+}
+
+#resultContainer {
+  width: 500px;
+  height: 570px;
+  border: 20px solid transparent; 
+  border-image: url('/images/flowerborder.jpg');
+  border-image-slice: 75;
+  border-image-repeat: stretch;
+  background-image: linear-gradient(#ffe0e5, #f77e93);
+  border-radius: 75px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#resultImage {
+  height: 325px;
+  width: 325px;
+  border-radius: 50%;
+}
+
+#resultText {
+  font-size: 40px;
+  margin: 0;
+  text-decoration: bold;
+}
+
+.restartButton {
+  width: 150px;
+  height: 50px;
+  border: none;
+  background-image: linear-gradient(rgb(247, 96, 121), rgb(245, 16, 54));
+  font-size: 17px;
+  border-radius: 50px;
+  margin-top: 30px;
+}
+
+.restartButton:hover {
+  cursor: pointer;
+  box-shadow: 3px 3px 15px rgb(156, 4, 49);
+}
+

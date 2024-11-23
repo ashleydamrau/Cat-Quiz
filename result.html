@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Butterfly+Kids&family=Henny+Penny&family=Twinkle+Star&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="resultContainer">
+    <p id="resultText"></p>
+    <img id="resultImage" src="" alt=""/>
+    <button class="restartButton" onclick="restartQuiz()">Restart Quiz</button>
+  </div>
+  <script>
+
+    const choices = JSON.parse(localStorage.getItem("quizChoices")) || {};
+
+    let resultCharacter = "";
+    const maxChoice = Object.keys(choices).reduce((a, b) => 
+  choices[a] > choices[b]? a : b);
+
+  let imagePath = "";
+  switch (maxChoice) {
+      case "A":
+        resultCharacter = "Madeline";
+        imagePath = "images/madeline.jpg"
+        break;
+      case "B":
+        resultCharacter = "Oscar";
+        imagePath = "images/oscar.jpg"
+        break;
+      case "C":
+        resultCharacter = "Mitzi";
+        imagePath = "images/mitzi.jpg"
+        break;
+      case "D":
+        resultCharacter = "Pichael";
+        imagePath = "images/pichael.jpg"
+        break;
+      default:
+        resultCharacter = "Unknown";
+        break;
+    }
+
+    document.getElementById("resultText").textContent = `You are ${resultCharacter}!`;
+
+    const resultImage = document.getElementById("resultImage");
+    resultImage.src = imagePath;
+    resultImage.alt = resultCharacter;
+
+    function restartQuiz() {
+      localStorage.clear();
+      window.location.href = "index.html";
+    }
+  </script>
+</body>
+</html>
